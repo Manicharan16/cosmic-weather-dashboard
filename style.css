@@ -1,0 +1,167 @@
+body {
+    background: linear-gradient(135deg, #1a1a3d, #2d2d5e);
+    color: #00ffff;
+    transition: background 1s ease;
+    overflow-x: hidden;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #0d0d2b, #1a1a4d);
+    color: #00ffff;
+}
+
+body.light-mode {
+    background: linear-gradient(135deg, #e0f7fa, #b3e5fc);
+    color: #00ff99;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+}
+
+.login-title {
+    color: #d4af37;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.auth-input:focus {
+    box-shadow: 0 0 10px #4CAF50;
+    transform: scale(1.03);
+    border-color: #4CAF50;
+    transition: all 0.3s ease;
+}
+
+.auth-btn {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #4CAF50;
+    background-color: #45a049;
+}
+
+#auth-toggle:checked ~ #auth-label {
+    margin-left: 50px;
+    transition: margin-left 0.3s ease;
+}
+
+#auth-toggle:checked ~ #auth-form #login-text {
+    content: "Signup";
+}
+
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: float 5s infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 15px;
+}
+
+.card input:focus, .card button:focus {
+    box-shadow: 0 0 5px #4CAF50;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+#dashboard .card {
+    background: rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s, background 0.3s;
+}
+
+#dashboard .card:hover {
+    transform: scale(1.05); 
+    background: rgba(255, 255, 255, 0.3); 
+}
+
+#hourly-forecast .card {
+    min-width: 150px;
+    margin-right: 10px;
+    scroll-behavior: smooth;
+    transition: transform 0.3s, background 0.3s;
+}
+
+#hourly-forecast .card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#hourly-forecast::-webkit-scrollbar {
+    display: none;
+}
+
+.favorite-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    color: inherit;
+}
+
+.favorite-card:hover {
+    transform: scale(1.1);
+}
+
+.rain {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    animation: fall 2s linear infinite;
+}
+
+@keyframes fall {
+    0% { top: -10px; }
+    100% { top: 100%; }
+}
+
+h3 {
+    color: black; 
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); 
+}
+
+.show-login {
+    display: flex !important;
+}
+
+.suggestion-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    width: 200px;
+    z-index: 1000;
+    display: none;
+}
+
+.suggestion-item {
+    padding: 5px 10px;
+    color: #e0f7fa;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
