@@ -1,4 +1,4 @@
-# cosmic-weather-dashboard
+# COSMIC WEATHER DASHBOARD
 
 The Cosmic Weather Dashboard is a dynamic, web-based application designed to provide real-time weather updates with an engaging and user-friendly interface. Built using modern web technologies, this project integrates the OpenWeatherMap API to deliver accurate weather data, including current conditions, hourly forecasts, and 7-day predictions. It features a seamless login system, customizable themes, and interactive elements like city search with autocomplete.
 
